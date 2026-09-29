@@ -1,6 +1,8 @@
 # Telegram-чат на GREEN-API
 
 Тестовое задание на должность «Фронтенд разработчик React».
+
+**Демо:** https://green-api-test-assignment.vercel.app/
 Веб-интерфейс для отправки и получения текстовых сообщений в Telegram через [GREEN-API](https://green-api.com/telegram/docs/). Внешний вид — по образцу [web.max.ru](https://web.max.ru/): палитра, шрифт, скругления и градиентный фон чата взяты из дизайн-токенов светлой темы MAX.
 
 ## Возможности
@@ -11,6 +13,18 @@
 - Получение ответов — [HTTP API](https://green-api.com/telegram/docs/api/receiving/technology-http-api/) (`ReceiveNotification` + `DeleteNotification`)
 - Статусы отправки (отправляется / отправлено / ошибка) и повторная отправка неотправленного сообщения
 - Счётчик непрочитанных, сохранение переписки между перезагрузками, адаптивная вёрстка
+
+## Скриншоты
+
+На скриншотах — демонстрационные данные. Все файлы — в [`docs/screenshots`](docs/screenshots).
+
+| Переписка | Нет Telegram на номере |
+|---|---|
+| ![Переписка](docs/screenshots/02-chat.png) | ![Ошибка при создании чата](docs/screenshots/03-new-chat-error.png) |
+
+| Вход | Вторая вкладка | Мобильная версия |
+|---|---|---|
+| ![Вход](docs/screenshots/01-login.png) | ![Чат открыт в другой вкладке](docs/screenshots/04-second-tab.png) | ![Мобильная версия](docs/screenshots/06-mobile-chat.png) |
 
 ## Запуск
 

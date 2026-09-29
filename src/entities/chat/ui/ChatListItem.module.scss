@@ -1,0 +1,67 @@
+@use '@/shared/styles/mixins' as *;
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-radius: var(--radius);
+  background: none;
+  text-align: left;
+  cursor: pointer;
+
+  &:hover {
+    background: var(--surface-secondary);
+  }
+}
+
+.active,
+.active:hover {
+  background: var(--accent-soft);
+}
+
+.body {
+  flex: 1;
+  min-width: 0;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.title {
+  @include ellipsis;
+  font-weight: 500;
+}
+
+.time {
+  flex: none;
+  color: var(--text-muted);
+  font-size: 12px;
+}
+
+.preview {
+  @include ellipsis;
+  display: block;
+  min-width: 0;
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+.badge {
+  flex: none;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 6px;
+  border-radius: 10px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 20px;
+  text-align: center;
+}

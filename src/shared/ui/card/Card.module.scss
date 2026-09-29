@@ -1,0 +1,35 @@
+.screen {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  padding: 16px;
+  background: var(--chat-bg);
+}
+
+// Матовая карточка поверх градиента, как окно входа в MAX
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+  max-width: 420px;
+  padding: 40px 32px 32px;
+  border-radius: 28px;
+  background: linear-gradient(rgb(255 255 255 / 0.64), rgb(255 255 255 / 0.88));
+  backdrop-filter: blur(25px);
+  box-shadow: 0 4px 24px rgb(0 0 0 / 0.08);
+}
+
+.title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.hint {
+  margin: -6px 0 8px;
+  color: var(--text-muted);
+  font-size: 15px;
+  text-align: center;
+}

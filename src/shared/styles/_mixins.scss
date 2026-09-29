@@ -1,0 +1,22 @@
+// Общие миксины для *.module.scss. Цвета и размеры — CSS-переменные из app/styles
+
+@mixin mobile {
+  @media (max-width: 720px) {
+    @content;
+  }
+}
+
+@mixin ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// Полупрозрачная плашка поверх фона чата, как системные сообщения в MAX
+@mixin system-pill {
+  margin: auto;
+  padding: 6px 14px;
+  border-radius: var(--bubble-radius);
+  background: var(--bubble-system);
+  color: var(--text-secondary);
+}

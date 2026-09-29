@@ -1,0 +1,56 @@
+@use '@/shared/styles/mixins' as *;
+
+.messenger {
+  display: flex;
+  height: 100%;
+}
+
+.aside {
+  display: flex;
+  flex: none;
+  width: 400px;
+}
+
+.main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+  background: var(--chat-bg);
+}
+
+// На мобильных на экране либо список чатов, либо открытый чат
+@include mobile {
+  .aside {
+    width: 100%;
+  }
+
+  .main {
+    display: none;
+  }
+
+  .chatOpen {
+    .aside {
+      display: none;
+    }
+
+    .main {
+      display: flex;
+    }
+  }
+}
+
+.placeholder {
+  @include system-pill;
+  font-size: 14px;
+  text-align: center;
+}
+
+.banner {
+  padding: 8px 16px;
+  background: #fff4e5;
+  color: #8a5300;
+  font-size: 13px;
+  text-align: center;
+}

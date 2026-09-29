@@ -1,0 +1,43 @@
+@use '@/shared/styles/mixins' as *;
+
+.message {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: flex-end;
+  gap: 2px 8px;
+  max-width: min(70%, 520px);
+  padding: 8px 12px;
+  border-radius: var(--bubble-radius);
+  box-shadow: 0 1px 2px rgb(0 0 0 / 0.08);
+
+  @include mobile {
+    max-width: 85%;
+  }
+}
+
+// Хвостик пузыря — меньший радиус у нижнего угла со стороны отправителя
+.in {
+  align-self: flex-start;
+  background: var(--bubble-in);
+  border-bottom-left-radius: var(--bubble-tail-radius);
+}
+
+.out {
+  align-self: flex-end;
+  background: var(--bubble-out);
+  border-bottom-right-radius: var(--bubble-tail-radius);
+}
+
+.text {
+  flex: 1 1 auto;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.meta {
+  display: flex;
+  gap: 4px;
+  color: var(--text-muted);
+  font-size: 11px;
+}

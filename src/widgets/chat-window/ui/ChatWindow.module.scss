@@ -1,0 +1,60 @@
+@use '@/shared/styles/mixins' as *;
+
+.chat {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+
+  @include mobile {
+    padding-inline: 12px;
+  }
+}
+
+// «Назад» нужна только на мобильных, где список и чат не помещаются рядом
+.back {
+  display: none;
+  border: none;
+  background: none;
+  font-size: 20px;
+  cursor: pointer;
+
+  @include mobile {
+    display: block;
+  }
+}
+
+.title {
+  font-weight: 600;
+}
+
+.subtitle {
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+.messages {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+  padding: 16px 20px;
+  overflow-y: auto;
+
+  @include mobile {
+    padding-inline: 12px;
+  }
+}
+
+.empty {
+  @include system-pill;
+}

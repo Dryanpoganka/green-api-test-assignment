@@ -1,0 +1,7 @@
+export { chatsReducer, type ChatsAction } from './model/chats-reducer'
+export { useChats } from './model/chats-context'
+export { ChatsProvider } from './model/ChatsProvider'
+export type { Chat, Message, MessageStatus } from './model/types'
+export { Avatar } from './ui/Avatar'
+export { ChatListItem } from './ui/ChatListItem'
+export { MessageBubble } from './ui/MessageBubble'

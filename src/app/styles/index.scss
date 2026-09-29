@@ -1,0 +1,53 @@
+// Глобальные стили приложения: тема и сброс браузерных стилей.
+// Стили компонентов — в *.module.scss рядом с ними, общие миксины — в shared/styles
+
+// Палитра и размеры взяты из светлой темы web.max.ru.
+// CSS-переменные, а не SCSS: их видят все модули и их можно менять в рантайме (например, для тёмной темы)
+:root {
+  --bg: #edeef2;
+  --surface: #ffffff;
+  --surface-secondary: #f5f7fa;
+  --border: #9da4ac4d;
+  --text: #060708;
+  --text-secondary: #060708ad;
+  --text-muted: #06070885;
+  --accent: #007aff;
+  --accent-hover: #0066d6;
+  --accent-soft: #007aff1a;
+  --bubble-out: #e9fdff;
+  --bubble-in: #ffffff;
+  --bubble-system: #ffffffa3;
+  --chat-bg: linear-gradient(to top right, #99d5d7, #80bcff);
+  --danger: #ff303c;
+  --radius: 12px;
+  --bubble-radius: 16px;
+  --bubble-tail-radius: 6px;
+
+  font-family: -apple-system, BlinkMacSystemFont, Roboto, system-ui, sans-serif;
+  font-size: 15px;
+  line-height: 1.4;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+#root {
+  height: 100dvh;
+}

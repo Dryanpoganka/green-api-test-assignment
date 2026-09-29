@@ -4,14 +4,12 @@ import { errorMessage } from '@/shared/lib'
 import { Button, Card, ErrorText, Field, Input } from '@/shared/ui'
 import s from './LoginForm.module.scss'
 
-const DEFAULT_API_URL = 'https://api.green-api.com'
-
 interface Props {
   onLogin: (creds: Credentials) => void
 }
 
 export function LoginForm({ onLogin }: Props) {
-  const [apiUrl, setApiUrl] = useState(DEFAULT_API_URL)
+  const [apiUrl, setApiUrl] = useState('')
   const [idInstance, setIdInstance] = useState('')
   const [apiTokenInstance, setApiTokenInstance] = useState('')
   const [error, setError] = useState<string | null>(null)
@@ -68,7 +66,14 @@ export function LoginForm({ onLogin }: Props) {
         </Field>
 
         <Field label="apiUrl">
-          <Input name="apiUrl" inputMode="url" value={apiUrl} onChange={(e) => setApiUrl(e.target.value)} required />
+          <Input
+            name="apiUrl"
+            inputMode="url"
+            placeholder="https://XXXX.api.green-api.com"
+            value={apiUrl}
+            onChange={(e) => setApiUrl(e.target.value)}
+            required
+          />
         </Field>
 
         {error && <ErrorText>{error}</ErrorText>}

@@ -48,6 +48,7 @@ export function LoginForm({ onLogin }: Props) {
             onChange={(e) => setIdInstance(e.target.value)}
             name="idInstance"
             inputMode="numeric"
+            placeholder="Например, 1101123456"
             autoComplete="off"
             required
             autoFocus
@@ -59,6 +60,7 @@ export function LoginForm({ onLogin }: Props) {
             type="password"
             name="apiTokenInstance"
             autoComplete="new-password"
+            placeholder="Токен из карточки инстанса"
             value={apiTokenInstance}
             onChange={(e) => setApiTokenInstance(e.target.value)}
             required
